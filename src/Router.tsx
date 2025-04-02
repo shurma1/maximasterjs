@@ -2,6 +2,7 @@ import {FC} from 'react';
 import {createHashRouter, RouterProvider} from 'react-router-dom';
 import {AppRoutes, routeConfig} from '@/config/routeConfig/routeConfig.tsx';
 import Meta from '@/components/Meta/Meta.tsx';
+import Layout from '@/components/Layout/Layout.tsx';
 
 const routesArray = Object.values(routeConfig) as Array<typeof routeConfig[AppRoutes]>;
 // I use HashRouter, because Browser Router does not work in GH Pages :/
@@ -14,7 +15,9 @@ const router = createHashRouter(
 					titleKey={routerElement.meta.titleKey}
 					descriptionKey={routerElement.meta.descriptionKey}
 				>
-					{routerElement.element}
+					<Layout>
+						{routerElement.element}
+					</Layout>
 				</Meta>
 		})
 	)
