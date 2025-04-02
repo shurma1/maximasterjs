@@ -5,6 +5,9 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  YA_API_KEY: ${{ secrets.YA_API_KEY }}
+
 permissions:
   contents: write
   pages: write
