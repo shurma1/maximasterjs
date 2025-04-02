@@ -10,26 +10,14 @@ export interface RouteMeta {
 type AppRouteObject = { meta: RouteMeta } & RouteObject;
 
 export enum AppRoutes {
-	Main = 'main',
 	RandomColor = 'randomColor',
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
-	[AppRoutes.Main]: '/',
-	[AppRoutes.RandomColor]: '/randomColor'
+	[AppRoutes.RandomColor]: '/'
 };
 
 export const routeConfig: Record<AppRoutes, AppRouteObject> = {
-	[AppRoutes.Main]: {
-		path: RoutePaths.main,
-		element: <div>Main</div>,
-		meta: {
-			titleKey: 'title key in i18n',
-			descriptionKey: 'description key in i18n',
-			navNameKey: 'nav key in i18n',
-			showInNav: false
-		}
-	},
 	[AppRoutes.RandomColor]: {
 		path: RoutePaths.randomColor,
 		element: <div>Random Color</div>,
@@ -37,7 +25,7 @@ export const routeConfig: Record<AppRoutes, AppRouteObject> = {
 			titleKey: 'title key in i18n',
 			descriptionKey: 'description key in i18n',
 			navNameKey: 'nav key in i18n',
-			showInNav: false
+			showInNav: true
 		}
 	}
 };
