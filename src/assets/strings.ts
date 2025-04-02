@@ -1,12 +1,12 @@
 export const strings = {
 	// Titles
-	RandomColorTitle: 'Задача #1 - Генерация случайного цвета',
+	RandomColorTitle: 'Задача #1 - Случайный цвет',
 
 	// Descriptions
-	RandomColorDescription: 'Задача #1 - Генерация случайного цвета | Задания от максимастер',
+	RandomColorDescription: 'Задача #1 - Случайный цвет | Задания от максимастер',
 
 	// navNames
-	RandomColorNavName: 'Генерация случайного цвета',
+	RandomColorNavName: 'Случайный цвет',
 };
 
 export type StringKey = keyof typeof strings;
