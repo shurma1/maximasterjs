@@ -1,6 +1,6 @@
 import {RouteObject} from 'react-router-dom';
 
-interface RouteMeta {
+export interface RouteMeta {
 	titleKey: string;
 	descriptionKey: string;
 	navNameKey: string;
