@@ -1,9 +1,10 @@
 import {RouteObject} from 'react-router-dom';
+import {StringKey} from '@/assets/strings.ts';
 
 export interface RouteMeta {
-	titleKey: string;
-	descriptionKey: string;
-	navNameKey: string;
+	titleKey: StringKey;
+	descriptionKey: StringKey;
+	navNameKey: StringKey;
 	showInNav?: boolean;
 }
 
@@ -22,9 +23,9 @@ export const routeConfig: Record<AppRoutes, AppRouteObject> = {
 		path: RoutePaths.randomColor,
 		element: <div>Random Color</div>,
 		meta: {
-			titleKey: 'title key in i18n',
-			descriptionKey: 'description key in i18n',
-			navNameKey: 'nav key in i18n',
+			titleKey: 'RandomColorTitle',
+			descriptionKey: 'RandomColorDescription',
+			navNameKey: 'RandomColorNavName',
 			showInNav: true
 		}
 	}
