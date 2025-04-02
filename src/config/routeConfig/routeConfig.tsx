@@ -1,5 +1,6 @@
 import {RouteObject} from 'react-router-dom';
 import {StringKey} from '@/assets/strings.ts';
+import RandomColorPage from '@/pages/RandomColorPage.tsx';
 
 export interface RouteMeta {
 	titleKey: StringKey;
@@ -31,7 +32,7 @@ export const RouteKeysByPath: Record<string, AppRoutes> = Object.entries(RoutePa
 export const routeConfig: Record<AppRoutes, AppRouteObject> = {
 	[AppRoutes.RandomColor]: {
 		path: RoutePaths.randomColor,
-		element: <div>Random Color</div>,
+		element: <RandomColorPage/>,
 		meta: {
 			titleKey: 'RandomColorTitle',
 			descriptionKey: 'RandomColorDescription',
