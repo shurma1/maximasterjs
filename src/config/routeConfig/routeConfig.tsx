@@ -1,6 +1,7 @@
 import {RouteObject} from 'react-router-dom';
 import {StringKey} from '@/assets/strings.ts';
 import RandomColorPage from '@/pages/RandomColorPage.tsx';
+import OrderPage from '@/pages/OrderPage.tsx';
 
 export interface RouteMeta {
 	titleKey: StringKey;
@@ -42,11 +43,11 @@ export const routeConfig: Record<AppRoutes, AppRouteObject> = {
 	},
 	[AppRoutes.Order]: {
 		path: RoutePaths.order,
-		element: <div>Order</div>,
+		element: <OrderPage/>,
 		meta: {
-			titleKey: 'RandomColorTitle',
-			descriptionKey: 'RandomColorDescription',
-			navNameKey: 'RandomColorNavName',
+			titleKey: 'OrderTitle',
+			descriptionKey: 'OrderDescription',
+			navNameKey: 'OrderNavName',
 			showInNav: true
 		}
 	}
