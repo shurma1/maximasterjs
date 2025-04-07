@@ -16,7 +16,7 @@ const Map = ({ onCoordinateSelect }: MapProps) => {
 	};
 
 	return (
-		<YMaps query={{ apikey: process.env.REACT_APP_YA_API_KEY }}>
+		<YMaps query={{ apikey: process.env.YA_API_KEY }}>
 			<div style={{ width: '100%', height: '400px' }}>
 				<YMap
 					defaultState={{ center: [54.193104, 37.613727], zoom: 15 }}
