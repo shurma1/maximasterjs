@@ -6,8 +6,16 @@ export const apiService = createApi({
 	reducerPath: 'apiService',
 	baseQuery: fetchBaseQuery({baseUrl: API_BASE_URL}),
 	endpoints: (build) => ({
-		getFilmById: build.query<IProduct, void>({
+		getProducts: build.query<IProduct[], void>({
 			query: () => '/products',
 		})
 	})
 });
+
+export const{
+	useGetProductsQuery
+} = apiService;
+
+export const {
+	getProducts
+} = apiService.endpoints;

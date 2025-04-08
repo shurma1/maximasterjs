@@ -7,7 +7,9 @@ const rootReducer = combineReducers({
 
 const setupStore = () => {
 	return configureStore({
-		reducer: rootReducer
+		reducer: rootReducer,
+		middleware: (getDefaultMiddleware) =>
+			getDefaultMiddleware().concat(apiService.middleware),
 	});
 };
 

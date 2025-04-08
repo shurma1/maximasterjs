@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'https://exercise.develop.maximaster.ru/service/';
+export const API_BASE_URL = 'http://localhost:8010/service/';

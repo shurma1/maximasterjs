@@ -2,6 +2,7 @@ import {RouteObject} from 'react-router-dom';
 import {StringKey} from '@/assets/strings.ts';
 import RandomColorPage from '@/pages/RandomColorPage.tsx';
 import OrderPage from '@/pages/OrderPage.tsx';
+import ProductsPage from '@/pages/ProductsPage.tsx';
 
 export interface RouteMeta {
 	titleKey: StringKey;
@@ -15,11 +16,13 @@ type AppRouteObject = { meta: RouteMeta } & RouteObject;
 export enum AppRoutes {
 	RandomColor = 'randomColor',
 	Order = 'order',
+	Products = 'products',
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
 	[AppRoutes.RandomColor]: '/',
-	[AppRoutes.Order]: '/order'
+	[AppRoutes.Order]: '/order',
+	[AppRoutes.Products]: '/products'
 };
 
 export const RouteKeysByPath: Record<string, AppRoutes> = Object.entries(RoutePaths).reduce(
@@ -48,6 +51,16 @@ export const routeConfig: Record<AppRoutes, AppRouteObject> = {
 			titleKey: 'OrderTitle',
 			descriptionKey: 'OrderDescription',
 			navNameKey: 'OrderNavName',
+			showInNav: true
+		}
+	},
+	[AppRoutes.Products]: {
+		path: RoutePaths.products,
+		element: <ProductsPage/>,
+		meta: {
+			titleKey: 'ProductsTitle',
+			descriptionKey: 'ProductsDescription',
+			navNameKey: 'ProductsNavName',
 			showInNav: true
 		}
 	}

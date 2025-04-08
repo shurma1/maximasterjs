@@ -3,3 +3,7 @@ export interface IProduct {
 	quantity: number;
 	name: string;
 }
+
+export interface IProductWithID extends IProduct {
+	id: number;
+}

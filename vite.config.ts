@@ -4,11 +4,14 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig(({mode}) => {
-	process.env = {...process.env, ...loadEnv(mode, process.cwd())};
+	const env = loadEnv(mode, process.cwd(), '');
 
 	return {
 		plugins: [react()],
 		base: '/maximasterjs',
+		define: {
+			'process.env': env
+		},
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, './src'),
