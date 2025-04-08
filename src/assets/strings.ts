@@ -3,16 +3,19 @@ export const strings = {
 	RandomColorTitle: 'Задача #1 - Случайный цвет',
 	OrderTitle: 'Задача #2 - Заказ',
 	ProductsTitle: 'Задача #3 - Таблица товаров',
+	CpuTitle: 'Задача #4 - График загренности процессора',
 
 	// Descriptions
 	RandomColorDescription: 'Задача #1 - Случайный цвет | Задания от максимастер',
 	OrderDescription: 'Задача #2 - Заказ | Задания от максимастер',
 	ProductsDescription: 'Задача #3 - Таблица товаров | Задания от максимастер',
+	CpuDescription: 'Задача #4 - График загренности процессора | Задания от максимастер',
 
 	// navNames
 	RandomColorNavName: 'Случайный цвет',
 	OrderNavName: 'Заказ',
 	ProductsNavName: 'Товары',
+	CpuNavName: 'График загренности cpu',
 
 	// Form strings
 	FullNameLabel: 'ФИО',
@@ -53,7 +56,14 @@ export const strings = {
 	quantityLabel: 'Количество',
 	pricePerUnitLabel: 'Цена за единицу',
 	totalLabel: 'Сумма',
-	noDataLabel: 'Нет данных для отображения'
+	noDataLabel: 'Нет данных для отображения',
+	cpuUsage: 'Использование CPU %',
+	cpuUsageLabel: 'График использования CPU',
+	usage: 'Использовано %',
+	requestsCountLabel: 'Количество запросов',
+	errorsCount: 'Количество ошибок',
+	errorsPercent: 'Процент ошибок'
+
 };
 
 export type StringKey = keyof typeof strings;

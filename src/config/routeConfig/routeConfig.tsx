@@ -3,6 +3,7 @@ import {StringKey} from '@/assets/strings.ts';
 import RandomColorPage from '@/pages/RandomColorPage.tsx';
 import OrderPage from '@/pages/OrderPage.tsx';
 import ProductsPage from '@/pages/ProductsPage.tsx';
+import CpuPage from '@/pages/CpuPage.tsx';
 
 export interface RouteMeta {
 	titleKey: StringKey;
@@ -17,12 +18,14 @@ export enum AppRoutes {
 	RandomColor = 'randomColor',
 	Order = 'order',
 	Products = 'products',
+	Cpu = 'cpu',
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
 	[AppRoutes.RandomColor]: '/',
 	[AppRoutes.Order]: '/order',
-	[AppRoutes.Products]: '/products'
+	[AppRoutes.Products]: '/products',
+	[AppRoutes.Cpu]: '/cpu'
 };
 
 export const RouteKeysByPath: Record<string, AppRoutes> = Object.entries(RoutePaths).reduce(
@@ -61,6 +64,16 @@ export const routeConfig: Record<AppRoutes, AppRouteObject> = {
 			titleKey: 'ProductsTitle',
 			descriptionKey: 'ProductsDescription',
 			navNameKey: 'ProductsNavName',
+			showInNav: true
+		}
+	},
+	[AppRoutes.Cpu]: {
+		path: RoutePaths.cpu,
+		element: <CpuPage/>,
+		meta: {
+			titleKey: 'CpuTitle',
+			descriptionKey: 'CpuDescription',
+			navNameKey: 'CpuNavName',
 			showInNav: true
 		}
 	}
