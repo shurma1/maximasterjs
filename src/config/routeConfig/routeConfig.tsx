@@ -84,9 +84,9 @@ export const routeConfig: Record<AppRoutes, AppRouteObject> = {
 		path: RoutePaths.spreadsheet,
 		element: <SpreadsheetPage/>,
 		meta: {
-			titleKey: 'CpuTitle',
-			descriptionKey: 'CpuDescription',
-			navNameKey: 'CpuNavName',
+			titleKey: 'SpreadsheetTitle',
+			descriptionKey: 'SpreadsheetDescription',
+			navNameKey: 'SpreadsheetNavName',
 			showInNav: true
 		}
 	}

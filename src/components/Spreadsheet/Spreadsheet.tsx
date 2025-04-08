@@ -11,7 +11,6 @@ const Spreadsheet = () => {
 	const [modalVisible, setModalVisible] = useState(false);
 	const [modalAction, setModalAction] = useState<'row' | 'col' | null>(null);
 
-	// Инициализация данных
 	useEffect(() => {
 		const savedData = localStorage.getItem('spreadsheetData');
 		if (savedData) {
@@ -24,7 +23,6 @@ const Spreadsheet = () => {
 		}
 	}, []);
 
-	// Сохранение данных
 	useEffect(() => {
 		if (data.length > 0) {
 			localStorage.setItem('spreadsheetData', JSON.stringify({
@@ -149,8 +147,6 @@ const Spreadsheet = () => {
 
 	return (
 		<div style={{ padding: '20px', maxWidth: '100%' }}>
-			<h1>Электронные таблицы</h1>
-
 			<div style={{ display: 'flex', alignItems: 'flex-start' }}>
 				<div style={{ overflowX: 'auto', marginRight: '10px' }}>
 					<table style={{ borderCollapse: 'collapse' }}>

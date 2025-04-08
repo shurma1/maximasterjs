@@ -14,7 +14,7 @@ const SpreadsheetPage = () => {
 				level={2}
 				style={{ textAlign: 'center' }}
 			>
-				{getString('RandomColorTitle')}
+				{getString('SpreadsheetTitle')}
 			</Title>
 			<Spreadsheet/>
 		</Flex>
