@@ -161,7 +161,10 @@ const Spreadsheet = () => {
 										<td key={cell.id} style={{ padding: 0 }}>
 											<Cell
 												value={cell.value}
-												isEditing={editingCell?.row === rowIndex && editingCell?.col === colIndex}
+												isEditing={
+													editingCell?.row === rowIndex
+													&& editingCell?.col === colIndex
+												}
 												onChange={(value) => handleCellChange(rowIndex, colIndex, value)}
 												onDoubleClick={() => handleCellDoubleClick(rowIndex, colIndex)}
 												onBlur={handleCellBlur}
